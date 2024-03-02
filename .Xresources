@@ -1,0 +1,11 @@
+! XTerm*faceName: Fira Code:size=12
+! XTerm*faceName: DejaVu Sans Mono for Powerline:size=15
+! XTerm*faceName: ProFont for Powerline Bold:size=19
+! XTerm*font: ProFont\ for\ Powerline\ Bold
+
+XTerm*faceName: DejaVu Sans Mono for Powerline:size=12
+XTerm*renderFont: true
+XTerm*termName: xterm-256color
+XTerm*vt100.translations: #override \
+	Shift Ctrl <Key> C: copy-selection(CLIPBOARD) \n\
+	Shift Ctrl <Key> V: insert-selection(CLIPBOARD)
