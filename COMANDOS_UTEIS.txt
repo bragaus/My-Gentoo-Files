@@ -1,0 +1,42 @@
+TERMINAL
+    setxkbmap br
+    setxkbmap us
+
+VIM
+    Retirar todos os espacoes em branco
+    \ws
+
+    Achar uma palavra e se mover entre as ocorrencias
+        /
+        n N
+
+    Copiar para o sistema
+        "+y
+
+    Colar rapido
+        "*p
+
+    Abrir arquivo de definicao
+        gd
+
+    Redimensionar nerdtree
+        ctrl+shift+setas
+
+AWESOME
+    Mover para outro desktop
+        command+shift+numero
+
+Resolver erro de permissao no startx
+    chmod u+s /usr/bin/Xorg
+
+Abrir imagem
+    display
+
+Atualizar configuracoes do Xresources
+    xrdb -merge ~/.Xresources
+
+Analisar abertura de arquivos na inicializacao de um programa
+    strace -e trace=file -o programa.log programa
+
+Mostrar atualizacao de um arquivo em tempo real
+    tail -f programa.log
