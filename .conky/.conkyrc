@@ -1,0 +1,49 @@
+conky.config = {
+	own_window_argb_visual = true,
+	own_window_argb_value = 0,
+	minimum_width = 300,
+	own_window = true,
+	own_window_type = 'dock',
+	own_window_class = 'conky',
+	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+	double_buffer = true,
+	alignment = 'top_left',
+	use_xft = true,
+	double_buffer = true,
+	update_interval = 0.5,
+	top_name_verbose = true,
+	draw_shades = false,
+	gap_y = 250,
+	gap_x = 0,
+        no_buffers = true,
+}
+
+conky.text = [[
+# Chars Special (caracteres especiais):
+#
+# ┤┤└└┴┴┐┐││┘┘┌┌├├┬┬┼┼┴┴── ││ ▽▼△▲▵▴▿
+# → ↓ ←
+# »» ««
+# © ®
+#
+
+${color #ff4400}┌─────────────────────── ${font Xirod}REDE${font}${color}
+${color #ff4400}├──${color} Interface < ${gw_iface} > 
+${color #ff4400}├──${color} Porta de entrada < ${gw_ip} >
+${color #ff4400}├──${color} Endereço interno < ${addr enp1s3} >
+${color #ff4400}├──${color} Endereço externo < ${texeci 10 dig +short myip.opendns.com @resolver1.opendns.com} > 
+${color #ff4400}├─────${color} Conexões 
+${color #ff4400}${offset 1}│${offset 60}├──${color} De entrada < ${tcp_portmon 1 32767 count} >
+${color #ff4400}${offset 1}│${offset 60}└──${color} De saída < ${tcp_portmon 32768 61000 count} >
+${color #ff4400}${offset 1}│${color}
+${color #ff4400}├──${color}Recebendo < ${downspeed enp1s3} k/s >
+${color #ff4400}${offset 1}│${offset 20}└──${upspeedgraph enp1s3 10, 300}${color}
+${color #ff4400}├──${color}Enviando < ${upspeed enp1s3} k/s >
+${color #ff4400}${offset 1}│ ${offset 15}└──${downspeedgraph enp1s3 10,300}${color}
+${color #ff4400}${offset 1}│
+${color #ff4400}└───${color}${color #ff4400}${alignc} < alucinação.consensual.do.ciberespaço />${color}
+
+]]
+
+
+
