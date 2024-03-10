@@ -1,6 +1,7 @@
 TERMINAL
     setxkbmap br
     setxkbmap us
+    fc-cache -f -v
 
 VIM
     Retirar todos os espacoes em branco
