@@ -1,69 +1,68 @@
 conky.config = {
-        own_window_argb_visual = true,
-        own_window_argb_value = 0,
-        minimum_width = 300,
-        own_window = true,
-        own_window_type = 'dock',
-        own_window_class = 'conky',
-        own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
-        double_buffer = true,
-        alignment = 'top_right',
-        use_xft = true,
-        double_buffer = true,
-        update_interval = 0.5,
-        top_name_verbose = true,
-        draw_shades = false,
-        gap_y = 80,
-        no_buffers = true,
-
+    own_window_argb_visual = true,
+    own_window_argb_value = 0,
+    minimum_width = 300,
+    own_window = true,
+    own_window_type = 'dock',
+    own_window_class = 'conky',
+    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+    double_buffer = true,
+    alignment = 'top_right',
+    use_xft = true,
+    double_buffer = true,
+    update_interval = 0.5,
+    top_name_verbose = true,
+    draw_shades = false,
+    gap_y = 80,
+    no_buffers = true,
 }
 
 conky.text = [[
-# Chars Special (caracteres especiais):
+    ${alignr}${font xirod:Bold:size=14}${color #22ccff}${offset -130} MANNOPLAY ${font}${color}
+    ${alignr}${offset -01}${font ubuntu size=10}${color #22ccff}  └───────── ${color}${sysname}${color #22ccff} ───────┐${color}
+    ${alignr}${color #22ccff}▼${color}
+    ${alignr}Sistema ${color #22ccff} -─┤${color}
+    ${alignr}Computador ${color #22ccff}-─┤    │${color}
+    ${alignr}Processamento ${color #22ccff}-─┤    │    │${color}
+    ${alignr}< $loadavg > Carregados ${color #22ccff}-─┤    │    │    │${color}
+    ${alignr}${offset -8} < ${freq 1}mhz > cpu.zero ${color #22ccff}─┘  ${offset 8} │    │    │    │${color}
+    ${alignr}${offset -50}< ${execi 5 sensors|grep 'temp1'| awk -F'+' '{print $2}' | awk -F'.' '{print $1}'} °C > Temperatura ${color #22ccff}─┘${offset 50}│    │    │    │${color}
+    ${alignr}${color #22ccff}│    │    │    │${color}
+    ${alignr}< ${entropy_avail} / ${entropy_poolsize}  > Entropia ${color #22ccff}─┤    │    │    │${color}
+    ${alignr}${offset -5}${entropy_perc}% < ${color #22ccff}${entropy_bar 5,100}${color} >${color #22ccff} ─┘${offset 5}  │    │    │    │${color}
+    ${alignr}${color #22ccff}│    │    │    │${color}
+    ${alignr}${cpu cpu1}% < ${color #22ccff}${cpubar cpu1 5,100}${color} > cpu.zero ${color #22ccff}-─┘    │    │${color}
+    ${alignr}${top name 1} «» ${top_mem cpu 1}${color #22ccff} -─┤         │    │${color}
+    ${alignr}${top name 2} «» ${top_mem cpu 2}${color #22ccff} -─┤         │    │${color}
+    ${alignr}${top name 3} «» ${top_mem cpu 3}${color #22ccff} -─┤         │    │${color}
+    ${alignr}${top name 4} «» ${top_mem cpu 4}${color #22ccff} -─┤         │    │${color}
+    ${alignr}${top name 5} «» ${top_mem cpu 5}${color #22ccff} -─┤         │    │${color}
+    ${alignr}${color #22ccff}${cpugraph 15,300}─┘    │${color}
+    ${alignr}${color #22ccff}              │${color}
+    ${alignr}< ${fs_used /home}/${fs_size /home} > Disco Rigido ${color #22ccff}-─┤${color}
+    ${alignr}${offset -16}< ${diskio_read sda4} > Lendo${color #22ccff}-─┤ ${offset 16}│${color}
+    ${alignr}${offset -16}< ${diskio_write sda4} > Escrevendo${color #22ccff}-─┤ ${offset 16}│${color}
+    ${alignr}${offset 36}< ${color #22ccff}${diskiograph 7,100}${color} >${color #22ccff}─────┘${offset -36}              │${color}
+    ${alignr}${color #22ccff}│${color}
+    ${alignr} Memória ${color #22ccff}-─┤${color}
+    ${alignr} Executando ${color #22ccff}-─┤    │${color}
+    ${alignr}< $mem > $memmax ${color #22ccff}-─┤    │    │${color}
+    ${alignr}$memperc% < ${color #22ccff}${membar 6,120}${color} > ${color #22ccff}-─┤    │    │${color}
+    ${alignr}< $swap > $swapmax  Swap ${color #22ccff}-─┤    │    │${color}
+    ${alignr}$swapperc% < ${color #22ccff}${swapbar 6,120}${color} > ${color #22ccff}-─┘    │    │${color}
+    ${alignr}${top_mem name 1} «» ${top_mem mem 1} ${color #22ccff}-─┤    │${color}
+    ${alignr}${top_mem name 2} «» ${top_mem mem 2} ${color #22ccff}-─┤    │${color}
+    ${alignr}${top_mem name 3} «» ${top_mem mem 3} ${color #22ccff}-─┤    │${color}
+    ${alignr}${top_mem name 4} «» ${top_mem mem 4} ${color #22ccff}-─┤    │${color}
+    ${alignr}${top_mem name 5} «» ${top_mem mem 5} ${color #22ccff}-─┤    │${color}
+    ${alignr}${color #22ccff}${memgraph 15,300}-─┘    │${color}
+    ${alignr}${color #22ccff}< deus.ex.machina /> - ────────────────────┘${color}
+]]
+
+#caracteres especiais
 # ☠ ™ ☻ ↼ ←
 # ┤┤└└┴┴┐┐││┘┘┌┌├├┬┬┼┼┴┴── ││ ▽▼△▲▵▴▿
 # → ↓ ←
 # »» ««
 # © ®
-#
-${alignr}${font xirod:Bold:size=14}${color #22ccff}${offset -130} MANNOPLAY ${font}${color}
-${alignr}${offset -01}${font ubuntu size=10}${color #22ccff}  └───────── ${color}${sysname}${color #22ccff} ───────┐${color}
-${alignr}${color #22ccff}▼${color}
-${alignr}Sistema ${color #22ccff} -─┤${color}
-${alignr}Computador ${color #22ccff}-─┤    │${color}
-${alignr}Processamento ${color #22ccff}-─┤    │    │${color}
-${alignr}< $loadavg > Carregados ${color #22ccff}-─┤    │    │    │${color}
-${alignr}${offset -8} < ${freq 1}mhz > cpu.zero ${color #22ccff}─┘  ${offset 8} │    │    │    │${color}
-${alignr}${offset -50}< ${execi 5 sensors|grep 'temp1'| awk -F'+' '{print $2}' | awk -F'.' '{print $1}'} °C > Temperatura ${color #22ccff}─┘${offset 50}│    │    │    │${color}
-${alignr}${color #22ccff}│    │    │    │${color}
-${alignr}< ${entropy_avail} / ${entropy_poolsize}  > Entropia ${color #22ccff}─┤    │    │    │${color}
-${alignr}${offset -5}${entropy_perc}% < ${color #22ccff}${entropy_bar 5,100}${color} >${color #22ccff} ─┘${offset 5}  │    │    │    │${color}
-${alignr}${color #22ccff}│    │    │    │${color}
-${alignr}${cpu cpu1}% < ${color #22ccff}${cpubar cpu1 5,100}${color} > cpu.zero ${color #22ccff}-─┘    │    │${color}
-${alignr}${top name 1} «» ${top_mem cpu 1}${color #22ccff} -─┤         │    │${color}
-${alignr}${top name 2} «» ${top_mem cpu 2}${color #22ccff} -─┤         │    │${color}
-${alignr}${top name 3} «» ${top_mem cpu 3}${color #22ccff} -─┤         │    │${color}
-${alignr}${top name 4} «» ${top_mem cpu 4}${color #22ccff} -─┤         │    │${color}
-${alignr}${top name 5} «» ${top_mem cpu 5}${color #22ccff} -─┤         │    │${color}
-${alignr}${color #22ccff}${cpugraph 15,300}─┘    │${color}
-${alignr}${color #22ccff}              │${color}
-${alignr}< ${fs_used /home}/${fs_size /home} > Disco Rigido ${color #22ccff}-─┤${color}
-${alignr}${offset -16}< ${diskio_read sda4} > Lendo${color #22ccff}-─┤ ${offset 16}│${color}
-${alignr}${offset -16}< ${diskio_write sda4} > Escrevendo${color #22ccff}-─┤ ${offset 16}│${color}
-${alignr}${offset 36}< ${color #22ccff}${diskiograph 7,100}${color} >${color #22ccff}─────┘${offset -36}              │${color}
-${alignr}${color #22ccff}│${color}
-${alignr} Memória ${color #22ccff}-─┤${color}
-${alignr} Executando ${color #22ccff}-─┤    │${color}
-${alignr}< $mem > $memmax ${color #22ccff}-─┤    │    │${color}
-${alignr}$memperc% < ${color #22ccff}${membar 6,120}${color} > ${color #22ccff}-─┤    │    │${color}
-${alignr}< $swap > $swapmax  Swap ${color #22ccff}-─┤    │    │${color}
-${alignr}$swapperc% < ${color #22ccff}${swapbar 6,120}${color} > ${color #22ccff}-─┘    │    │${color}
-${alignr}${top_mem name 1} «» ${top_mem mem 1} ${color #22ccff}-─┤    │${color}
-${alignr}${top_mem name 2} «» ${top_mem mem 2} ${color #22ccff}-─┤    │${color}
-${alignr}${top_mem name 3} «» ${top_mem mem 3} ${color #22ccff}-─┤    │${color}
-${alignr}${top_mem name 4} «» ${top_mem mem 4} ${color #22ccff}-─┤    │${color}
-${alignr}${top_mem name 5} «» ${top_mem mem 5} ${color #22ccff}-─┤    │${color}
-${alignr}${color #22ccff}${memgraph 15,300}-─┘    │${color}
-${alignr}${color #22ccff}< deus.ex.machina /> - ────────────────────┘${color}
-]]
 
