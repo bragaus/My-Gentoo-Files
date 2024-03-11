@@ -6,23 +6,14 @@
       "newline": true,
       "segments": [
         {
-          "foreground": "#ffbebc",
-          "leading_diamond": "<#ff70a6> \ue200 </>",
+          "foreground": "#9B15E6",
+          "leading_diamond": "<#F08402> \ue200 </>",
           "properties": {
             "display_host": true
           },
           "style": "diamond",
-          "template": "{{ .UserName }} <#ffffff>on</>",
+          "template": "{{ .UserName }} ",
           "type": "session"
-        },
-        {
-          "foreground": "#bc93ff",
-          "properties": {
-            "time_format": "Monday <#ffffff>at</> 3:04 PM"
-          },
-          "style": "diamond",
-          "template": " {{ .CurrentDate | date .Format }} ",
-          "type": "time"
         },
         {
           "foreground": "#ee79d1",
