@@ -3,9 +3,10 @@ conky.config = {
     own_window_argb_value = 0,
     minimum_width = 300,
     own_window = true,
-    own_window_type = 'dock',
+    own_window_type = 'desktop',
+    own_window_transparent = yes,
     own_window_class = 'conky',
-    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+    own_window_hints = 'below',
     double_buffer = true,
     alignment = 'top_right',
     use_xft = true,
@@ -58,11 +59,3 @@ conky.text = [[
     ${alignr}${color #22ccff}${memgraph 15,300}-─┘    │${color}
     ${alignr}${color #22ccff}< deus.ex.machina /> - ────────────────────┘${color}
 ]]
-
-#caracteres especiais
-# ☠ ™ ☻ ↼ ←
-# ┤┤└└┴┴┐┐││┘┘┌┌├├┬┬┼┼┴┴── ││ ▽▼△▲▵▴▿
-# → ↓ ←
-# »» ««
-# © ®
-

@@ -13,8 +13,8 @@ conky.config = {
 	update_interval = 0.5,
 	top_name_verbose = true,
 	draw_shades = false,
-	gap_y = 250,
-	gap_x = 0,
+	gap_y = 30,
+	gap_x = 1100,
     no_buffers = true,
 }
 
@@ -37,9 +37,3 @@ conky.text = [[
     ${color #ff4400}└───${color}${color #ff4400}${alignc} < alucinação.consensual.do.ciberespaço />${color}
 
 ]]
-
-#caracteres especiais:
-# ┤┤└└┴┴┐┐││┘┘┌┌├├┬┬┼┼┴┴── ││ ▽▼△▲▵▴▿
-# → ↓ ←
-# »» ««
-# © ®
