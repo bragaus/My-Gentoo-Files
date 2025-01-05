@@ -15,11 +15,12 @@ conky.config = {
     top_name_verbose = true,
     draw_shades = false,
     gap_y = 80,
+    gap_x = 2000,
     no_buffers = true,
 }
 
 conky.text = [[
-    ${alignr}${font xirod:Bold:size=14}${color #22ccff}${offset -130} MANNOPLAY ${font}${color}
+    ${alignr}${font xirod:Bold:size=14}${color #22ccff}${offset -130} BRAGA US ${font}${color}
     ${alignr}${offset -01}${font ubuntu size=10}${color #22ccff}  └───────── ${color}${sysname}${color #22ccff} ───────┐${color}
     ${alignr}${color #22ccff}▼${color}
     ${alignr}Sistema ${color #22ccff} -─┤${color}
